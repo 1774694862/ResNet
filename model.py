@@ -130,8 +130,8 @@ class ResNet(nn.Module):
         x = self.fc(x)
 
         return x
-def resnet50():
-    return ResNet(BigBlock, [3, 4, 6, 3],num_classes=100)
+def resnet50(classes):
+    return ResNet(BigBlock, [3, 4, 6, 3],num_classes=classes)
 def resnet101():
     return ResNet(BigBlock, [3, 4, 23, 3],num_classes=200)
-print(resnet101())
+# print(resnet101())
